@@ -46,6 +46,7 @@ const todoList = todo && todo.length>0 && todo.map((rec)=>(
 
 const create = newTodo =>{
     setTodo([...todo,newTodo])
+    
 }
 
 const handleDelete =()=>{
