@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Component } from 'react';
+import "./Todo.css";
 
 
 function Todo ({todo, toggleComplete}) {
@@ -20,7 +21,7 @@ let output;
 
 if(isEditing){
     output =(
-        <div>
+        <div className="Todo">
            <form>
                <input 
                     onChange={handleChange} value={task} 
@@ -30,8 +31,7 @@ if(isEditing){
     )
 }else{
     output =(
-        <div>
-            {console.log(todo.done)}
+        <div className="Todo">
            <li 
            id={todo.itemId}
            onClick={toggleValue}

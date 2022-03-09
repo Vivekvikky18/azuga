@@ -1,21 +1,47 @@
-.Todo-task {
-position: relative;
-transition: opacity 0.4s linear;
-}
-
-
-.Todo-task .completed{
-    opacity: 0.5;
-}
-
-.Todo-task .completed:before{
-content: '';
-animation: strikeitem 0.5s ease-out 0s forwards;
-}
-
-@keyframes strikeitem {
+.Todo {
+    display: flex;
+    margin: 0 -3rem 4px;
+    padding: 1.1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .Todo-task {
+    position: relative;
+    transition: opacity 0.4s linear;
+    cursor: pointer;
+  }
+  
+  .Todo-task.completed {
+    opacity: 0.6;
+  }
+  
+  .Todo-task.completed:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: black;
+    animation: strikeitem 0.5s ease-out 0s forwards;
+  }
+  
+  @keyframes strikeitem {
     to {
-        width: calc(100% + 1rem);
+      width: calc(100% + 1rem);
     }
-}
+  }
+  
+ 
+  
 
+  
+ 
+  
+  
+  
+  
+  

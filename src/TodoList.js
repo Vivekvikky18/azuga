@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Todo from './Todo'
 import NewTodoForm from './NewTodoForm'
+import "./TodoList.css";
 
 function TodoList () {
 const [todo, setTodo] = useState([
@@ -67,7 +68,7 @@ const handleDelete =()=>{
 
     return(
 
-        <div>
+        <div className="TodoList">
             <h1>
                 Todo List
             </h1>

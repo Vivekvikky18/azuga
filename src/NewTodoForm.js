@@ -1,5 +1,6 @@
 import React, {useState, useReducer} from 'react'
 import { Component } from 'react';
+import "./newTodoForm.css";
 
 
 function NewTodoForm ({todo, createTodo}) {
@@ -26,7 +27,7 @@ const handleSubmit = e =>{
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="NewTodoForm" onSubmit={handleSubmit}>
                 <label>
                     New To do
                 </label>
